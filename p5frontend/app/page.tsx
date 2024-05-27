@@ -1,12 +1,11 @@
 import { redirect } from "next/navigation";
-import { dbGetVideogames } from "@/lib/videogames";
+import { actionGetVgs } from "@/actions/videogames";
 import VideogameCard from "@/components/VideogameCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 
 export default async function Home() {
-  const vgs = await dbGetVideogames();
+  const vgs = await actionGetVgs();
 
   return (
     <main className="p-8">

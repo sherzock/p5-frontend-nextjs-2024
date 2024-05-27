@@ -5,16 +5,13 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     name: string;
 }
 
-const Searchbox: React.FC<InputProps> = ({ label, name, ...props }) => {
+const Searchbox: React.FC<InputProps> = ({name, ...props }) => {
     return (
-        <div className="mb-4">
-            <label htmlFor={name} className="">
-                {label}
-            </label>
+        <div className="">
             <input
                 id={name}
                 name={name}
-                className="flex flex-col mt-2"
+                className="flex flex-col mr-5"
                 {...props}
             />
         </div>

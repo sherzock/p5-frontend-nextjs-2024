@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({ label, ...props }) => {
   return (
     <button
-      className=""
+      className="text-center"
       {...props}
     >
       {label}
