@@ -56,7 +56,7 @@ export const AddNewVideogameToLibrary = async (  hoursPlayed: number, achievemen
     });
 }
 
-export const DeleteNewVideogameToLibrary = async ( idInfo: number) => {
+export const DeleteVideogameFromLibrary = async ( idInfo: number) => {
     return await db.infoPlayer.delete({
         where: { idInfo },
     });
