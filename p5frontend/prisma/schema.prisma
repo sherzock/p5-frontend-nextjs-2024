@@ -9,7 +9,26 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
+model Videogame {
+  idVG             Int       @id @default(autoincrement())
+  name         String
+  description    String
+  poster        String    // URL o ruta de la imagen de la portada
+  grades          Float
+  launcYear     Int
+  developer  String
+  totalAchievments Int
+  infoPlayer   infoPlayer[]
+}
+
+model infoPlayer {
+  idInfo             Int       @id @default(autoincrement())
+  hoursPlayed          Int
+  AchievementsUnlocked Int
+  videogameId   Int
+  videojuego     Videogame @relation(fields: [videogameId], references: [idVG])
+}
