@@ -135,6 +135,92 @@ async function main() {
         }  
     });
     
+    const Info1 = await db.infoPlayer.create({
+        data: {
+            videogameId: 1,
+            hoursPlayed: 120,
+            achievementsUnlocked: 120,
+        },
+    });
+
+    const Info2 = await db.infoPlayer.create({
+        data: {
+            videogameId: 2,
+            hoursPlayed: 5,
+            achievementsUnlocked: 5,
+        },
+    });
+
+    const Info3 = await db.infoPlayer.create({
+        data: {
+            videogameId: 3,
+            hoursPlayed: 20,
+            achievementsUnlocked: 25,
+        },
+    });
+    const Info4 = await db.infoPlayer.create({
+        data: {
+            videogameId: 4,
+            hoursPlayed: 200,
+            achievementsUnlocked: 36,
+        },
+    });
+    const Info5 = await db.infoPlayer.create({
+        data: {
+            videogameId: 5,
+            hoursPlayed: 49,
+            achievementsUnlocked: 48,
+        },
+    });
+    const Info6 = await db.infoPlayer.create({
+        data: {
+            videogameId: 6,
+            hoursPlayed: 203,
+            achievementsUnlocked: 5,
+        },
+    });
+    const Info7 = await db.infoPlayer.create({
+        data: {
+            videogameId: 7,
+            hoursPlayed: 12,
+            achievementsUnlocked: 15,
+        },
+    });
+    const Info8 = await db.infoPlayer.create({
+        data: {
+            videogameId: 8,
+            hoursPlayed: 1600,
+            achievementsUnlocked: 52,
+        },
+    });
+    const Info9 = await db.infoPlayer.create({
+        data: {
+            videogameId: 9,
+            hoursPlayed: 1,
+            achievementsUnlocked: 11,
+        },
+    });
+    const Info10 = await db.infoPlayer.create({
+        data: {
+            videogameId: 10,
+            hoursPlayed: 3,
+            achievementsUnlocked: 23,
+        },
+    });
+    const Info11 = await db.infoPlayer.create({
+        data: {
+            videogameId: 11,
+            hoursPlayed: 37,
+            achievementsUnlocked: 26,
+        },
+    });
+    const Info12 = await db.infoPlayer.create({
+        data: {
+            videogameId: 12,
+            hoursPlayed: 99,
+            achievementsUnlocked: 35,
+        },
+    });
 }
 
  await main();
