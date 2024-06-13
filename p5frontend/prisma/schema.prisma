@@ -19,16 +19,16 @@ model Videogame {
   description    String
   poster        String    // URL o ruta de la imagen de la portada
   grades          Float
-  launcYear     Int
+  launchYear     Int
   developer  String
-  totalAchievments Int
-  infoPlayer   infoPlayer[]
+  totalAchievements Int
+  infoPlayer   InfoPlayer[]
 }
 
-model infoPlayer {
+model InfoPlayer {
   idInfo             Int       @id @default(autoincrement())
   hoursPlayed          Int
-  AchievementsUnlocked Int
+  achievementsUnlocked Int
   videogameId   Int
-  videojuego     Videogame @relation(fields: [videogameId], references: [idVG])
+  videogame     Videogame @relation(fields: [videogameId], references: [idVG])
 }
