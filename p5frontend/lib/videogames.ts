@@ -10,9 +10,7 @@ export type Videogame = {
     grades: number;
     launchYear: number;
     developer: string;
-    totalAchievements: number;
-    hoursPlayed: number;
-    achivementsUnlocked: number;     
+    totalAchievements: number;  
 };
 
 export const dbGetVideogames = async () => {
