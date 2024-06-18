@@ -6,14 +6,15 @@ import React from "react";
 
 export default function VideogameCard({ videogame }: { videogame: Videogame }) {
   return (
-    <div className="flex flex-row m-2 w-64 hover:outline hover:scale-110 shadow-xl"> 
-        <div className="m-4 flex flex-col justify-around">
+    <div className="w-64 hover:outline hover:scale-110 m-5"> 
+        <div className="m-5 flex flex-col justify-around">
           <p className="italic">{videogame.name}</p>
-          <p className="italic">{videogame.developer}</p>
-          <p className="">{videogame.description}</p>
-          <p className="bold">{videogame.totalAchievements}</p>
-          <p className="">{videogame.launchYear}</p>
-          <p className="bold">{videogame.grades}</p> 
+          <br/>
+          <p className="italic">Developer: {videogame.developer}</p>
+          <p className="">Description: {videogame.description}</p>
+          <p className="bold">Achivements: {videogame.totalAchievements}</p>
+          <p className="">Since: {videogame.launchYear}</p>
+          <p className="bold">Reviews: {videogame.grades}/10</p> 
         </div>
       </div>
   );
