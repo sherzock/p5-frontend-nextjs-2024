@@ -6,7 +6,7 @@ async function main() {
         data: {
             name: 'The Legend of Zelda: Breath of the Wild',
             description: 'Un juego de acción y aventura',
-            poster: 'https://example.com/zelda.jpg',
+            poster: '/zelda.jpg',
             grades: 9.8,
             launchYear: 2017,
             developer: 'Nintendo',
@@ -17,7 +17,7 @@ async function main() {
         data: {
             name: 'The Witcher 3: Wild Hunt',
             description: 'Un juego de rol',
-            poster: 'https://example.com/witcher3.jpg',
+            poster: '/witcher.jpg',
             grades: 9.5,
             launchYear: 2015,
             developer: 'CD Projekt',
@@ -28,7 +28,7 @@ async function main() {
         data: {
             name: 'Cyberpunk 2077',
             description: 'Un juego de rol de acción',
-            poster: 'https://example.com/cyberpunk2077.jpg',
+            poster: '/cyberpunk.jpg',
             grades: 8.2,
             launchYear: 2020,
             developer: 'CD Projekt',
@@ -39,7 +39,7 @@ async function main() {
         data: {
             name: 'God of War',
             description: 'Un juego de acción y aventura',
-            poster: 'https://example.com/godofwar.jpg',
+            poster: '/godofwar.jpg',
             grades: 9.6,
             launchYear: 2018,
             developer: 'Santa Monica Studio',
@@ -50,7 +50,7 @@ async function main() {
         data: {
             name: 'Red Dead Redemption 2',
             description: 'Un juego de acción y aventura',
-            poster: 'https://example.com/rdr2.jpg',
+            poster: '/rdr2.jpg',
             grades: 9.7,
             launchYear: 2018,
             developer: 'Rockstar Games',
@@ -61,7 +61,7 @@ async function main() {
         data: {
             name: 'Horizon Zero Dawn',
             description: 'Un juego de rol de acción',
-            poster: 'https://example.com/horizon.jpg',
+            poster: '/horizon.jpg',
             grades: 8.9,
             launchYear: 2017,
             developer: 'Guerrilla Games',
@@ -72,7 +72,7 @@ async function main() {
         data: {
             name: 'Final Fantasy VII Remake',
             description: 'Un juego de rol',
-            poster: 'https://example.com/ff7remake.jpg',
+            poster: '/ffvii.jpg',
             grades: 8.8,
             launchYear: 2020,
             developer: 'Square Enix',
@@ -83,7 +83,7 @@ async function main() {
         data: {
             name: 'Ghost of Tsushima',
             description: 'Un juego de acción y aventura',
-            poster: 'https://example.com/ghostoftsushima.jpg',
+            poster: '/ghostoftsushima.jpg',
             grades: 9.2,
             launchYear: 2020,
             developer: 'Sucker Punch Productions',
@@ -94,7 +94,7 @@ async function main() {
         data: {
             name: 'Spider-Man',
             description: 'Un juego de acción y aventura',
-            poster: 'https://example.com/spiderman.jpg',
+            poster: '/spiderman.jpg',
             grades: 9.0,
             launchYear: 2018,
             developer: 'Insomniac Games',
@@ -105,7 +105,7 @@ async function main() {
         data: {
             name: 'Assassin\'s Creed Valhalla',
             description: 'Un juego de rol de acción',
-            poster: 'https://example.com/acvalhalla.jpg',
+            poster: '/acvalhalla.jpg',
             grades: 8.4,
             launchYear: 2020,
             developer: 'Ubisoft',
@@ -116,7 +116,7 @@ async function main() {
         data: {
             name: 'Doom Eternal',
             description: 'Un juego de disparos en primera persona',
-            poster: 'https://example.com/doometernal.jpg',
+            poster: '/doom.jpg',
             grades: 8.7,
             launchYear: 2020,
             developer: 'id Software',
@@ -127,7 +127,7 @@ async function main() {
         data: {
             name: 'Resident Evil Village',
             description: 'Un juego de terror y supervivencia',
-            poster: 'https://example.com/revillage.jpg',
+            poster: '/revillage.jpg',
             grades: 9.1,
             launchYear: 2021,
             developer: 'Capcom',
