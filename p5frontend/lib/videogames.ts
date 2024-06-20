@@ -1,6 +1,5 @@
+"use server";
 import { db } from "@/db/db";
-import exp from "constants";
-import "server-only";
 
 export type Videogame = {
     idVG: number;
@@ -45,6 +44,48 @@ export const createNewVideogame = async (name: string, description: string, post
         }
     });
 }
+export async function createNewVideogameForm (formData: FormData) {
+    const nameField = formData.get("name");
+    if(nameField === null) {
+        throw new Error(`Missing "name" field`);
+    }
+    const name = nameField.toString();
+
+    const descriptionField = formData.get("description");
+    if(descriptionField === null) {
+        throw new Error(`Missing "description" field`);
+    }
+    const description = descriptionField.toString();
+
+    const poster = "/acvalhalla.jpg";
+
+    const launchYearField = formData.get("launchYear");
+    if(launchYearField === null) {
+        throw new Error(`Missing "launchYear" field`);
+    }
+    const launchYear = launchYearField.toString();
+
+    const gradesField = formData.get("grades");
+    if(gradesField === null) {
+        throw new Error(`Missing "grades" field`);
+    }
+    const grades = gradesField.toString();
+
+    const developerField = formData.get("developer");
+    if(developerField === null) {
+        throw new Error(`Missing "developer" field`);
+    }
+    const developer = developerField.toString();
+
+
+    const totalAchievementsFIeld = formData.get("totalAchievements");
+    if(totalAchievementsFIeld === null) {
+        throw new Error(`Missing "totalAchievements" field`);
+    }
+    const totalAchievements = totalAchievementsFIeld.toString();
+
+    await createNewVideogame(name, description, poster, Number(grades), Number(launchYear), developer, Number(totalAchievements));
+}
 
 export const AddNewVideogameToLibrary = async (  hoursPlayed: number, achievementsUnlocked: number, videogameId: number) => {
     return await db.infoPlayer.create({
@@ -56,9 +97,9 @@ export const AddNewVideogameToLibrary = async (  hoursPlayed: number, achievemen
     });
 }
 
-export const DeleteVideogameFromLibrary = async ( idInfo: number) => {
-    return await db.infoPlayer.delete({
-        where: { idInfo },
+export const DeleteVideogame = async ( idVG: number) => {
+    return await db.videogame.delete({
+        where: { idVG },
     });
 }
 

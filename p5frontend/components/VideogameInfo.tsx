@@ -19,7 +19,7 @@ export default function VideogameInfo ({ videogame }: { videogame: Videogame }) 
                 <p className="">DESCRIPTION: {videogame.description}</p>
                 <p className="">ACHIEVEMENTS: {videogame.totalAchievements}</p>
                 <p className="">RELEASE DATE: {videogame.launchYear}</p>
-                <p className="">REVIEWS: {videogame.grades}/10</p> 
+                <p className="">REVIEWS: {videogame.grades}/10</p>
             </div>
         </div>
     </div>

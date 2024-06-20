@@ -1,11 +1,16 @@
 "use server";
 
-import { dbGetVideogames, dbGetVideogame, AddSessionInfoVideogame, createNewVideogame, DeleteVideogameFromLibrary, findInfoPlayerfromVG } from "@/lib/videogames";
+import { dbGetVideogames, dbGetVideogame, AddSessionInfoVideogame, DeleteVideogameFromLibrary, createNewVideogame, DeleteVideogame, findInfoPlayerfromVG } from "@/lib/videogames";
 import { revalidatePath } from "next/cache";
 
 export async function actionGetVgs() {
     const vgs = dbGetVideogames();
     return vgs;
+}
+
+export async function actionDeleteVideogame(vgId: number) {
+    const vg = DeleteVideogame(vgId);
+    revalidatePath("/");
 }
 
 export async function actionGetVg(vgId: number) {
