@@ -8,18 +8,18 @@ export default function VideogameInfo ({ videogame }: { videogame: Videogame }) 
   return (
     <div className="flex flex-col justify-around align-items-center"> 
         <div className="">
-          <h1 className="italic text-center text-3xl">{videogame.name}</h1>
+          <h1 className="text-center text-3xl bold">{videogame.name}</h1>
         </div>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 m-5">
             <div>
                 <Image src={videogame.poster} width={86} height={80} alt={`Poster of "${videogame.name}"`} className="w-80 h-120 mt-5 mb-5"/>
             </div>
-            <div className="content-center justify-center	">
-                <p className="italic">Developer: {videogame.developer}</p>
-                <p className="">Description: {videogame.description}</p>
-                <p className="bold">Achivements: {videogame.totalAchievements}</p>
-                <p className="">Since: {videogame.launchYear}</p>
-                <p className="bold">Reviews: {videogame.grades}/10</p> 
+            <div className="content-center justify-center space-y-3.5">
+                <p className="">DEVELOPER: {videogame.developer}</p>
+                <p className="">DESCRIPTION: {videogame.description}</p>
+                <p className="">ACHIEVEMENTS: {videogame.totalAchievements}</p>
+                <p className="">RELEASE DATE: {videogame.launchYear}</p>
+                <p className="">REVIEWS: {videogame.grades}/10</p> 
             </div>
         </div>
     </div>
