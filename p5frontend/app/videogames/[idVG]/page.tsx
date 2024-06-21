@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import VideogameInfo from "@/components/VideogameInfo";
 import Link from "next/link";
 import DeleteForm from "@/components/DeleteForm";
-import InfoPlayer from "@/components/InfoPlayer";
 
 type PageParams = {
     params: { idVG: string;};
@@ -21,7 +20,6 @@ export default async function Page({ params }: PageParams) {
       <div className="p-5 flex flex-row mt-4 mb-4 flex-wrap place-items-center justify-evenly place-content-center	">
         <VideogameInfo videogame={vg}/>
       <DeleteForm id={idVG}/>
-      <InfoPlayer/>
       </div>
           <Link href="/" className="text-white text-center mb-5 ">
             Go Back
