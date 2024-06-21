@@ -22,7 +22,7 @@ model Videogame {
   launchYear     Int
   developer  String
   totalAchievements Int
-  infoPlayer   InfoPlayer[]
+  infoPlayer   InfoPlayer[] 
 }
 
 model InfoPlayer {
@@ -30,5 +30,5 @@ model InfoPlayer {
   hoursPlayed          Int
   achievementsUnlocked Int
   videogameId   Int
-  videogame     Videogame @relation(fields: [videogameId], references: [idVG])
+  videogame     Videogame @relation(fields: [videogameId], references: [idVG], onDelete: Cascade)
 }

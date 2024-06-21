@@ -1,6 +1,6 @@
 "use server";
 
-import { dbGetVideogames, dbGetVideogame, AddSessionInfoVideogame, DeleteVideogameFromLibrary, createNewVideogame, DeleteVideogame, findInfoPlayerfromVG } from "@/lib/videogames";
+import { dbGetVideogames, dbGetVideogame, AddSessionInfoVideogame, createNewVideogame, DeleteVideogame, findInfoPlayerfromVG } from "@/lib/videogames";
 import { revalidatePath } from "next/cache";
 
 export async function actionGetVgs() {

@@ -97,7 +97,10 @@ export const AddNewVideogameToLibrary = async (  hoursPlayed: number, achievemen
     });
 }
 
-export const DeleteVideogame = async ( idVG: number) => {
+export const DeleteVideogame = async ( formData: FormData) => {
+    const id = formData.get("idVG");
+    const idVG = Number(id);
+    
     return await db.videogame.delete({
         where: { idVG },
     });
