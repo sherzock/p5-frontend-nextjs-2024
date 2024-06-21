@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "./ui/Button";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { redirect } from 'next/navigation'
 import { DeleteVideogame } from "@/lib/videogames";
 

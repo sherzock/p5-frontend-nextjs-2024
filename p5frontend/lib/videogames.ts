@@ -111,3 +111,61 @@ export const findInfoPlayerfromVG = async (videogameId: number) => {
         where: { videogameId },
     });
 };
+
+
+
+async function updateInfoPlayer(formData: FormData): Promise<void> {
+    try {
+      const videogameId = formData.get('videogameId') as string;
+      const hoursPlayed = parseInt(formData.get('hoursPlayed') as string);
+      const achievementsUnlocked = parseInt(formData.get('achievementsUnlocked') as string);
+  
+      if (!videogameId || isNaN(hoursPlayed) || isNaN(achievementsUnlocked)) {
+        console.log('Invalid form data');
+        return;
+      }
+  
+      const infoPlayer = await db.infoPlayer.findFirst({
+        where: {
+          videogameId: parseInt(videogameId),
+        },
+      });
+  
+      if (!infoPlayer) {
+        console.log(`InfoPlayer entry not found for videogameId: ${videogameId}`);
+        return;
+      } 
+      await db.infoPlayer.update({
+        where: {
+          idInfo: infoPlayer.idInfo,
+        },
+        data: {
+          hoursPlayed,
+          achievementsUnlocked,
+        },
+      });
+  
+      console.log(`InfoPlayer entry updated for videogameId: ${videogameId}`);
+    } catch (error) {
+      console.error('Error updating InfoPlayer entry:', error);
+    } 
+  }
+
+  export async function getInfoPlayerByVideogameId(videogameId: string) {
+    try {
+    
+        if (!videogameId) {
+          console.log('Invalid form data');
+          return;
+        }
+    
+        return await db.infoPlayer.findFirst({
+          where: {
+            videogameId: parseInt(videogameId),
+          },
+        });
+      } catch (error) {
+        console.error('Error finding InfoPlayer entry:', error);
+      } 
+}
+
