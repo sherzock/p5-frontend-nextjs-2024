@@ -11,6 +11,12 @@ export default function VideogameCard({ url }: { url: string }) {
     const id = parseInt(url, 10);
 
     const session = actionGetPlayerInfoFromVGId(id.toString());
+
+    return (
+        <div>
+            
+        </div>
+    )
         
 
 

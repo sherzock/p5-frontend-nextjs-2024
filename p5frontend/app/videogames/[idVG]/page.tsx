@@ -26,6 +26,10 @@ export default async function Page({ params }: PageParams) {
       <div className="p-5 flex flex-row mt-4 mb-4 flex-wrap place-items-center justify-evenly place-content-center	">
         <VideogameInfo videogame={vg}/>
       </div>
+          <Link href='[idVG]/Session' as={`${idVG}/Session`} className="text-white text-center mb-5 ">
+            <Button label="Add Session Info"></Button>
+          </Link>
+          <br></br>
           <Link href="/" className="text-white text-center mb-5 ">
             <Button label="Go Back"></Button>
           </Link>
