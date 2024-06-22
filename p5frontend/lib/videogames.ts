@@ -107,9 +107,22 @@ export const DeleteVideogame = async ( formData: FormData) => {
 }
 
 export const findInfoPlayerfromVG = async (videogameId: number) => {
-    return await db.infoPlayer.findFirst({
-        where: { videogameId },
+  try {
+    const infoPlayer = await db.infoPlayer.findFirst({
+      where: {
+        videogameId: videogameId
+      }
     });
+
+    if (!infoPlayer) {
+      throw new Error('No InfoPlayer found for the given Videogame ID');
+    }
+
+    return infoPlayer; 
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 };
 
 

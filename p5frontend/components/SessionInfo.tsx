@@ -1,21 +1,15 @@
 "use client";
 
-import { Videogame } from "@/lib/videogames";
-import Image from "next/image";
-import { dbGetVideogames } from "@/lib/videogames";
 import React from "react";
-import { actionGetPlayerInfoFromVGId } from "@/actions/videogames";
+import { InfoPlayer } from "@prisma/client";
 
-export default function VideogameCard({ url }: { url: string }) {
-
-    const id = parseInt(url, 10);
-
-    const session = actionGetPlayerInfoFromVGId(id.toString());
+export default function SessionInfo({ session }: { session: InfoPlayer }) {
 
     return (
-        <div>
-            
-        </div>
+        <>
+            <p>Hours Played: {session.hoursPlayed}</p>
+            <p>Achievements Unlocked: {session.achievementsUnlocked}</p>
+        </>
     )
         
 
