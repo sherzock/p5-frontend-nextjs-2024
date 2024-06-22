@@ -11,9 +11,7 @@ export default function SearchForm() {
 
   const getVg = async (formData: FormData) => {
     formRef.current?.reset();
-   /* for (var pair of formData.entries()) {
-        console.log(pair[0]+ ', ' + pair[1]); 
-    }*/
+
     await redirect(`/videogames/${formData.get("video game search")}`);
   }
 

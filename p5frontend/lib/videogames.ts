@@ -19,7 +19,7 @@ export const dbGetVideogames = async () => {
 };
 
 export const dbGetVideogame = async (idVG: number) => {
-    return await db.videogame.findUniqueOrThrow({
+    return await db.videogame.findUnique({
         where: { idVG },
     });
 };

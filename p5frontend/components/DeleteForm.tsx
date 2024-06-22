@@ -17,9 +17,10 @@ export default function DeleteForm({ id }: {id : string}) {
   }
 
   return (
+    
     <form ref={formRef} action={DeleteVg} className="mt-5">
-    <Button label="Delete Videogame">
-    </Button>
-</form>
+      <Button label="Delete Videogame">
+      </Button>
+    </form>
   );
 }

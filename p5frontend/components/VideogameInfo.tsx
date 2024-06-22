@@ -3,6 +3,7 @@
 import { Videogame } from "@/lib/videogames";
 import Image from "next/image";
 import React from "react";
+import DeleteForm from "./DeleteForm";
 
 export default function VideogameInfo ({ videogame }: { videogame: Videogame }) {
   return (
@@ -20,6 +21,7 @@ export default function VideogameInfo ({ videogame }: { videogame: Videogame }) 
                 <p className="">ACHIEVEMENTS: {videogame.totalAchievements}</p>
                 <p className="">RELEASE DATE: {videogame.launchYear}</p>
                 <p className="">REVIEWS: {videogame.grades}/10</p>
+                <DeleteForm id={videogame.idVG.toString()}/>
             </div>
         </div>
     </div>
