@@ -9,8 +9,8 @@ export default function Header() {
             Library
         </div>
       </Link>
-      <Link href={"/create"} className="self-center place-self-end	">
-        Create Game
+      <Link href={"/create"} className="justify-self-end	">
+        <Button label="Create Game"></Button>
       </Link>
     </header>
   );

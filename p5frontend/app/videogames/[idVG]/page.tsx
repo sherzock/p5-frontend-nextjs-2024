@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import VideogameInfo from "@/components/VideogameInfo";
 import Link from "next/link";
 import DeleteForm from "@/components/DeleteForm";
+import Button from "@/components/ui/Button";
 
 type PageParams = {
     params: { idVG: string;};
@@ -22,7 +23,7 @@ export default async function Page({ params }: PageParams) {
       <DeleteForm id={idVG}/>
       </div>
           <Link href="/" className="text-white text-center mb-5 ">
-            Go Back
+            <Button label="Go Back"></Button>
           </Link>
       </div>
       <Footer/>

@@ -21,7 +21,7 @@ export default function SearchForm() {
     <form ref={formRef} action={getVg} className="mt-5">
       <div className="flex flex-row space-x-4 items-center place-content-center	place-items-center m-5">
         <Searchbox name="video game search" type="text" placeholder="Enter a video game name" ></Searchbox>
-        <Button label="Search" type="submit" className="text-center " />
+        <Button label="Search" type="submit" />
       </div>
     </form>
   );
