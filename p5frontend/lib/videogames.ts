@@ -84,7 +84,8 @@ export async function createNewVideogameForm (formData: FormData) {
     }
     const totalAchievements = totalAchievementsFIeld.toString();
 
-    await createNewVideogame(name, description, poster, Number(grades), Number(launchYear), developer, Number(totalAchievements));
+    const vg = await createNewVideogame(name, description, poster, Number(grades), Number(launchYear), developer, Number(totalAchievements));
+    await AddNewInfoPlayerToVG(vg.idVG);
 }
 
 export const AddNewVideogameToLibrary = async (  hoursPlayed: number, achievementsUnlocked: number, videogameId: number) => {
@@ -95,6 +96,16 @@ export const AddNewVideogameToLibrary = async (  hoursPlayed: number, achievemen
             videogameId
         }
     });
+}
+
+export const AddNewInfoPlayerToVG = async ( videogameId: number) => {
+  return await db.infoPlayer.create({
+      data: {
+          hoursPlayed: 0,
+          achievementsUnlocked: 0,
+          videogameId
+      }
+  });
 }
 
 export const DeleteVideogame = async ( formData: FormData) => {
@@ -113,10 +124,6 @@ export const findInfoPlayerfromVG = async (videogameId: number) => {
         videogameId: videogameId
       }
     });
-
-    if (!infoPlayer) {
-      throw new Error('No InfoPlayer found for the given Videogame ID');
-    }
 
     return infoPlayer; 
   } catch (error) {

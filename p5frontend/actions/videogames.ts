@@ -1,6 +1,6 @@
 "use server";
 
-import { dbGetVideogames, dbGetVideogame, AddSessionInfoVideogame, createNewVideogame, DeleteVideogame, findInfoPlayerfromVG, updateInfoPlayer, getInfoPlayerByVideogameId } from "@/lib/videogames";
+import { dbGetVideogames, dbGetVideogame, AddSessionInfoVideogame, createNewVideogame, DeleteVideogame, findInfoPlayerfromVG, updateInfoPlayer, getInfoPlayerByVideogameId, AddNewInfoPlayerToVG } from "@/lib/videogames";
 import { revalidatePath } from "next/cache";
 
 export async function actionGetVgs() {
@@ -41,5 +41,11 @@ export async function actionUpdateInfoFromDB(formData: FormData) {
 
 export async function actionGetPlayerInfoFromVGId(VGId: string) {
     const vg = getInfoPlayerByVideogameId(VGId);
+    revalidatePath("/");
+}
+
+
+export async function actionAddNewInfoPlayerToVG(VGId: string) {
+    const vg = AddNewInfoPlayerToVG(Number(VGId));
     revalidatePath("/");
 }

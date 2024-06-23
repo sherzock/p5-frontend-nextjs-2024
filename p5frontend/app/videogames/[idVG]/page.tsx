@@ -22,11 +22,14 @@ export default async function Page({ params }: PageParams) {
   if(!vg)
     notFound();
 
+  if(!session)
+    notFound();
+
   return (
     <main className="p-8">
       <Header/>
       <div className="flex flex-col justify-center">
-      <div className="p-5 flex flex-row mt-4 mb-4 flex-wrap place-items-center justify-evenly place-content-center	">
+      <div className="p-5 flex flex-col mt-4 mb-4 flex-wrap place-items-center justify-evenly place-content-center	">
         <VideogameInfo videogame={vg}/>
         <SessionInfo session={session}/>
       </div>

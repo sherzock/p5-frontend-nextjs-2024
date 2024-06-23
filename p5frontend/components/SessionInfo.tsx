@@ -6,10 +6,10 @@ import { InfoPlayer } from "@prisma/client";
 export default function SessionInfo({ session }: { session: InfoPlayer }) {
 
     return (
-        <>
-            <p>Hours Played: {session.hoursPlayed}</p>
-            <p>Achievements Unlocked: {session.achievementsUnlocked}</p>
-        </>
+        <div className="m-5 flex flex-col justify-around text-center ">
+            <p>HOURS PLAYED: {session.hoursPlayed}</p>
+            <p>ACHIEVEMENTS UNLOCKED: {session.achievementsUnlocked}</p>
+        </div>
     )
         
 
