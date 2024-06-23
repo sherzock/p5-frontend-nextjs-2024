@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.heightBig {
+  height: 38rem;
+}

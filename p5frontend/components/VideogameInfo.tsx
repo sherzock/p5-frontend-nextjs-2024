@@ -9,7 +9,7 @@ export default function VideogameInfo ({ videogame }: { videogame: Videogame }) 
   return (
     <div className="flex flex-col justify-around align-items-center"> 
         <div className="">
-          <h1 className="text-center text-3xl bold">{videogame.name}</h1>
+          <h1 className="text-center text-5xl font-extrabold">{videogame.name}</h1>
         </div>
         <div className="flex flex-row gap-5 m-5">
             <div>
