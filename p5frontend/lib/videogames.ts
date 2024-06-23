@@ -57,7 +57,7 @@ export async function createNewVideogameForm (formData: FormData) {
     }
     const description = descriptionField.toString();
 
-    const poster = "/acvalhalla.jpg";
+    const poster = "/Template.jpg";
 
     const launchYearField = formData.get("launchYear");
     if(launchYearField === null) {
