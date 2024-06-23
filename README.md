@@ -1,3 +1,60 @@
+# Descripción
+
+Se trata de una libreria de videojuegos, como podria ser la que nos encontramos en una plataforma como [Steam] (https://store.steampowered.com/?l=spanish). En ella podemos consultar los juegos que tenemos, ver las horas que hemos jugado y los logros obtenidos. Tambien he creado botones para crear juegos nuevos y añadir sesiones de juego nuevas. Esto en una biblioteca normal no tendriamos esas opciones pero a modo de demostración ayuda a entender como funcionaria. Tambien hay una barra de busqueda donde poniendo el id del juego podemos encontrar el juego deseado. Ademas tamvbien podemos borrar los juegos que queramos.
+
+# Router
+
+- La pagina principal se encuentra en le root ("/"). En ella se muestra un listado de todos los videojuegos con la información basica.
+- Pagina de Información del juego ("/videogames/[videogameID]"). En ella se muestra la información de un videojuego concreto con la información del jugador en question.
+- Pagina de añadir nueva sesión ("/videogames/[videogameID]/Session"). En ella puedes encontrar un formulario donde se puede logear una nueva sesion de juego para un juego en concreto.
+- Pagina de creacion de juego (/create). En ella se puede encontrar un formulario para crear un juego nuevo (tambien genera una nueva session de juego).
+
+# Base de datos
+
+La base de datos se compone de dos tablas.
+
+## Videojuegos
+
+En la tabla de videojuegos podemos encontrar toda la información relacionada con el juego en si:
+- Descripción
+- Desarrollador
+- Año de lanzamiento
+- Logros totales del juego
+- Url de la portada
+- Nota
+- Nombre dle juego
+
+## InfoPlayer
+
+En esta tabla se guardan los datos de los jugadores en relación a los juegos:
+- Horas jugadas
+- Logros desbloqueados
+- Id del juego
+
+# Puesta a punto
+
+Al descargar el proyecto, lo primero que tenemos que generar, es la base de datos:
+
+bunx prisma generate
+
+A continuación tendremos que hacer un push del modelo creado a la nueva base de datos:
+
+bunx prisma db push
+
+Después debemos generar los datos para poder probar el modelo que hemos creado:
+
+bunx prisma db seed
+
+Podemos ver el contenido usando:
+
+bunx prisma studio
+
+Para Empezar el servidor hay que poner:
+
+bun run dev
+
+Ahora ya estamos preparados para usarlo.
+
 
 # Frontend en React, usando NextJS
 
