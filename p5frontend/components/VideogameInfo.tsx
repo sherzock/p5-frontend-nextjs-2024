@@ -11,11 +11,11 @@ export default function VideogameInfo ({ videogame }: { videogame: Videogame }) 
         <div className="">
           <h1 className="text-center text-5xl font-extrabold">{videogame.name}</h1>
         </div>
-        <div className="flex flex-row gap-5 m-5">
-            <div>
-                <Image src={videogame.poster} width={86} height={80} alt={`Poster of "${videogame.name}"`} className="w-80 h-120 mt-5 mb-5"/>
+        <div className="flex flex-row gap-5 m-5 justify-center">
+            <div className=" 	">
+                <Image src={videogame.poster} width={86} height={80} alt={`Poster of "${videogame.name}"`} className="w-80 h-120 mt-5 mb-5 justify-self-end self-end	"/>
             </div>
-            <div className="content-center justify-center space-y-3.5">
+            <div className="content-center justify-center space-y-3.5 w-2/12">
                 <p className="">DEVELOPER: {videogame.developer}</p>
                 <p className="">DESCRIPTION: {videogame.description}</p>
                 <p className="">ACHIEVEMENTS: {videogame.totalAchievements}</p>
